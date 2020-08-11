@@ -1,0 +1,35 @@
+<div class="fullPage">
+<p>
+    <mat-toolbar class="header">
+      <span><img class="barImage" src="assets/algo-1bh.png" alt="Powered by Algofusion"></span>
+      <span class="barER">Enterprise Recon</span>
+    </mat-toolbar>
+</p>
+
+  <mat-drawer-container class="example-container">
+    <mat-drawer class="leftpanel" mode="side" opened>
+        <mat-action-list>
+            <mat-list-item class="sidebuttons" [routerLink]="['']"> <mat-icon class="iconspace">dashboard</mat-icon> DASHBOARD</mat-list-item>
+            <mat-list-item class="sidebuttons" [routerLink]="['/recons']"><mat-icon class="iconspace">list</mat-icon> RECONS</mat-list-item>
+            <mat-list-item class="sidebuttons" [routerLink]="['/summary']"><mat-icon class="iconspace">desktop_mac</mat-icon> SUMMARY</mat-list-item>
+            <mat-list-item class="sidebuttons" [routerLink]="['/report']"><mat-icon class="iconspace">table_chart</mat-icon> REPORTS</mat-list-item>
+        </mat-action-list>
+    </mat-drawer>
+    <mat-drawer-content>
+        <router-outlet></router-outlet>
+        <ag-grid-angular
+        #agGrid
+        style="width: 100%; height: 800px;"
+        class="ag-theme-balham"
+        [rowData]="rowData"
+        [columnDefs]="columnData"
+        rowSelection="multiple"
+        [animateRows]= "true"
+        [pagination]= "true"
+        [paginationPageSize]= "26"
+       
+        >
+    </ag-grid-angular>
+    </mat-drawer-content>
+  </mat-drawer-container>
+</div>
