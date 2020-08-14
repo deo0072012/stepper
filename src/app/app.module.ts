@@ -5,7 +5,10 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import { AgGridModule } from 'ag-grid-angular';
 import {MatListModule} from '@angular/material/list';
-import {MatIconModule} from '@angular/material/icon';
+import { MatIconModule } from '@angular/material/icon';
+import {MatGridListModule} from '@angular/material/grid-list';
+import {MatStepperModule} from '@angular/material/stepper';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 
@@ -15,6 +18,10 @@ import { ReconsComponent } from './homepage/recons/recons.component';
 import { SummaryComponent } from './homepage/summary/summary.component';
 import { ReportsComponent } from './homepage/reports/reports.component';
 import { GridDataService } from './homepage/grid-data.service';
+import { StepperComponent } from './homepage/stepper/stepper.component';
+import { MatFormFieldModule} from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+
 
 @NgModule({
   declarations: [
@@ -23,6 +30,9 @@ import { GridDataService } from './homepage/grid-data.service';
     ReconsComponent,
     SummaryComponent,
     ReportsComponent,
+    StepperComponent,
+
+  
   ],
   imports: [
     BrowserModule,
@@ -30,9 +40,15 @@ import { GridDataService } from './homepage/grid-data.service';
     BrowserAnimationsModule,
     MatToolbarModule,
     MatSidenavModule,
-    AgGridModule.withComponents([DashboardComponent]),
+    MatGridListModule,
+    AgGridModule,
     MatListModule,
-    MatIconModule
+    MatIconModule,
+    MatStepperModule,
+    FormsModule,
+    ReactiveFormsModule,
+    MatFormFieldModule,
+    MatInputModule 
   ],
   providers: [GridDataService],
   bootstrap: [AppComponent]

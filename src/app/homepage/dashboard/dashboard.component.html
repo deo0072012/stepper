@@ -1,35 +1,129 @@
 <div class="fullPage">
-<p>
-    <mat-toolbar class="header">
-      <span><img class="barImage" src="assets/algo-1bh.png" alt="Powered by Algofusion"></span>
-      <span class="barER">Enterprise Recon</span>
-    </mat-toolbar>
-</p>
+  <mat-toolbar color="primary" class="tool-bar">
+    <!-- <mat-toolbar-row>
+      <span>
+        <img 
+        class="barImage" 
+        src="assets/algo-1bh.png" 
+        alt="Powered by Algofusion">
+      </span>
+      <button 
+        class="nav-trigger"
+        mat-icon-button>
+          <mat-icon>menu</mat-icon>
+        </button>
+      <span class="barER">
+        Enterprise Recon
+      </span>
+    </mat-toolbar-row> -->
+    
+    <mat-toolbar-row>
+      <button 
+        class="nav-icon"
+        mat-icon-button (click)="drawer.toggle()">
+        <mat-icon>view_headline</mat-icon>
+      </button>
+      <span class="logo-container">
+        <img 
+        class="barImage" 
+        src="assets/algo-1bh.png" 
+        alt="Powered by Algofusion">
+      </span>
+      <button 
+      class="nav-icon"
+      mat-icon-button>
+        <mat-icon>account_circle</mat-icon>
+      </button>
+    </mat-toolbar-row>
+  </mat-toolbar>
+  <mat-drawer-container>
+    <mat-drawer #drawer class="leftpanel" mode="side">
+        <mat-action-list class="nav-items">
+         
+          <h4 align ="center">Settings</h4>
+            <mat-list-item class="sidebuttons" [routerLink]="['']"> 
+              <mat-icon class="iconspace">dashboard</mat-icon> 
+              <span class="nav-title"> Manage Recons </span>
+            </mat-list-item>
 
-  <mat-drawer-container class="example-container">
-    <mat-drawer class="leftpanel" mode="side" opened>
-        <mat-action-list>
-            <mat-list-item class="sidebuttons" [routerLink]="['']"> <mat-icon class="iconspace">dashboard</mat-icon> DASHBOARD</mat-list-item>
-            <mat-list-item class="sidebuttons" [routerLink]="['/recons']"><mat-icon class="iconspace">list</mat-icon> RECONS</mat-list-item>
-            <mat-list-item class="sidebuttons" [routerLink]="['/summary']"><mat-icon class="iconspace">desktop_mac</mat-icon> SUMMARY</mat-list-item>
-            <mat-list-item class="sidebuttons" [routerLink]="['/report']"><mat-icon class="iconspace">table_chart</mat-icon> REPORTS</mat-list-item>
+            <mat-list-item class="sidebuttons" [routerLink]="['/stepper']">
+              <mat-icon class="iconspace">table_chart</mat-icon> 
+              <span class="nav-title"> Stepper </span>
+            </mat-list-item>
+
+            <mat-list-item class="sidebuttons" [routerLink]="['/recons']">
+              <mat-icon class="iconspace">list</mat-icon> 
+              <span class="nav-title"> Configure recons</span>
+            </mat-list-item>
+            <mat-list-item class="sidebuttons" [routerLink]="['/summary']">
+              <mat-icon class="iconspace">desktop_mac</mat-icon> 
+              <span class="nav-title"> Recon reports</span>
+            </mat-list-item>
+           
         </mat-action-list>
     </mat-drawer>
-    <mat-drawer-content>
+    <mat-drawer-content class="content-wrapper">
         <router-outlet></router-outlet>
-        <ag-grid-angular
-        #agGrid
-        style="width: 100%; height: 800px;"
-        class="ag-theme-balham"
-        [rowData]="rowData"
-        [columnDefs]="columnData"
-        rowSelection="multiple"
-        [animateRows]= "true"
-        [pagination]= "true"
-        [paginationPageSize]= "26"
-       
-        >
-    </ag-grid-angular>
+        <h3 class="header"> Master Recon Data </h3>
+        <div class="input-data">
+              Source :     
+            <input type="text"
+              placeholder="GL Bank Accounts">
+            <button 
+            class="upload-icon"
+            mat-button>
+              <span class="upload">
+                <mat-icon>cloud_upload</mat-icon>
+              </span>
+            </button>
+            <button mat-raised-button class="close" on-click="close()" >close</button>
+        </div>
+        <div class="grid-table">
+          <div class="button-list">
+            <button mat-raised-button
+            class="properties">
+            <mat-icon class="font">filter_alt</mat-icon>
+              <span class="text-button">Filter</span>
+            </button>
+            <button mat-raised-button
+            class="properties">
+            <mat-icon class="font">filter_alt</mat-icon>
+              <span class="text-button">Derive Column</span>
+            </button>
+            <button mat-raised-button
+            class="properties">
+            <mat-icon class="font">filter_alt</mat-icon>
+              <span class="text-button">Custom Filter</span>
+            </button>
+            <button mat-raised-button
+            class="properties">
+            <mat-icon class="font">filter_alt</mat-icon>
+              <span class="text-button">Skip</span>
+            </button>
+            <button mat-raised-button
+            class="properties">
+            <mat-icon class="font">calculate</mat-icon>
+              <span class="text-button">Set as Headers</span>
+            </button>
+            <button mat-raised-button
+            class="properties f-right">
+            <mat-icon class="font">remove_red_eye</mat-icon>
+              <span class="text-button">Properties</span>
+            </button>
+          </div>
+          <ag-grid-angular
+            #agGrid
+            style="width: 98%; height: 400px;"
+            class="ag-theme-balham"
+            [rowData]="rowData"
+            [columnDefs]="columnData"
+            rowSelection="multiple"
+            [animateRows]= "true"
+            [pagination]= "true"
+            [paginationPageSize]= "15">
+          </ag-grid-angular>
+        </div>
+        
     </mat-drawer-content>
   </mat-drawer-container>
 </div>

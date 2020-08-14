@@ -1,21 +1,20 @@
-.fullPage
-{
+.fullPage {
    width: initial;
-   height: 100%;
-    
+   height: 100vh;
 }
-.header{
+/* .header {
     background-color: #0072c6;
     color: #ffffff;
     display: block;
-    height: 4.4rem;  
-}
-.barImage{
+    height: 120px;
+} */
+.barImage {
     max-width: 10%;
-    vertical-align: middle;
-    margin-top: 0.7rem;
-    padding-left: 1rem;
-    padding-right: 1rem;
+    float: left;
+    margin-left: 2px;
+    /* margin-top: 0.7rem; */
+    /* padding-left: 1rem; */
+    /* padding-right: 1rem; */
 }
 /*.barER
 {      
@@ -37,37 +36,32 @@
         vertical-align: middle;
         height: 3.625rem;
 }*/
-.barER
+/* .barER
 {   float: middle;   
     font-size: 2rem;
     vertical-align: middle;
-}
-.example-container {
-    width: 100%;
-    height: 100%;
-}
-.leftpanel{
-    margin-top: 4.4rem;
-    background-color: #0072c6;
-    height: 100%;
+} */
+
+.leftpanel {
     position: fixed;
-    width: 10%;
-    font-size: 2rem;
+    background-color: midnightblue;
+    width: 180px;
+    font-size: 12px;
+    margin-top: 60px;
+    margin-left: -8px;
 }
-.sidebuttons
-{
-    font-size: 1rem;
+.sidebuttons {
     color:white;
-    margin-top: 0.75rem;
+    /* margin-top: auto; */
     
 }
 .iconspace{
     margin-right: 0.8em;
     margin-left: 0rem;
 }
-.ag-theme-balham{
-    margin-left: 2%;
-    margin-top:2%;
+.ag-theme-balham {
+    margin-left: 1%;
+    margin-top: 0%;
     border-top: 1px solid #9bc2e6;
     border-left: 1px solid #9bc2e6;
     border-right: 1px solid #9bc2e6;
@@ -75,3 +69,101 @@
     background-color: #ddebf7;
     color: #fff;  
 }
+
+.tool-bar {
+    background-color: #0867c0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 998;
+}
+
+.nav-trigger {
+    margin-top: 10px;
+    float: left;
+}
+.content-wrapper {
+    /* margin: 7vh; */
+    margin-top: 60px;
+    margin-left: 1%;
+}
+
+.nav-icon {
+    background-color: #0867c0;
+    color: #fff;
+    border: none;
+    font-size: 32px;
+    
+    
+}
+.upload-icon {
+    background-color: #0867c0;
+    color: #fff;
+    border: none;
+    font-size: 10px;
+    margin-left: 32px;
+    width: 40px;
+    padding: 5px;
+    border-radius: 5px;
+}
+.logo-container {
+    margin-left: 12px;
+}
+.nav-title {
+    font-size: 12px;
+}
+.f-right {
+    float: right;
+}
+.header {
+    margin-top: 10px;
+    margin-left: 15px;
+}
+.example-form {
+    width: 100px;
+    margin-left: 15px;
+}
+.grid-table {
+    margin-bottom: 20px;
+}
+.input-data {
+    margin-left: 40px;
+}
+input[type="text"] {
+    margin-left: 20px;
+    margin-top: 0px;
+    padding: 10px;
+    height: 15px;
+    width: 400px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.button-list {
+    margin: 30px 0px;
+}
+.properties {
+    padding: 5px;
+    margin-left: 32px;
+    border-radius: 5px;  
+    font-size: 12px; 
+    background-color: #0867c0;
+    color: #fff;
+    border: none;
+}
+.font {
+    font-size: 16px; 
+}
+
+.close{
+     float:right;
+     background-color: lightslategrey;
+     width: 50px;
+     height: 30px;
+     border-radius: 10px;
+}
+
+.p{
+    padding-top: 200px;
+}
+
