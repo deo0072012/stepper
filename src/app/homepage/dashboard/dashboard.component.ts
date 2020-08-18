@@ -46,7 +46,7 @@ export class DashboardComponent implements OnInit {
 
 
   close() {
-    this.router.navigate(['/dashboard']);
+    this.router.navigate(['']);
   }
 
 }
