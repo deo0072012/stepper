@@ -1,6 +1,9 @@
-import { Component, OnInit } from '@angular/core';
-import {GridDataService} from '../grid-data.service';
+import { Component, OnInit, Input } from '@angular/core';
+import { GridDataService } from '../grid-data.service';
 import { Router } from '@angular/router';
+import {AllModules,Module} from '@ag-grid-enterprise/all-modules'
+
+
 
 @Component({
   selector: 'app-dashboard',
@@ -8,20 +11,42 @@ import { Router } from '@angular/router';
   styleUrls: ['./dashboard.component.css']
 })
 export class DashboardComponent implements OnInit {
+  public modules: Module[] = AllModules;
+
   [x: string]: any;
-  columnData= [];
-  rowData= [];
+  @Input() columnData = [];
+  @Input() rowData = [];
+  autoGroupColumnDef;
+  rowGroupPanelShow;
+  defaultColDef;
+  sideBar;
 
-  constructor(private DataService: GridDataService,public router: Router) { }
 
-  ngOnInit(){
+  constructor(private DataService: GridDataService, public router: Router) {
+    this.defaultColDef = {
+      flex: 1,
+      minWidth: 100,
+      enableValue: true,
+      enableRowGroup: true,
+      enablePivot: true,
+      sortable: true,
+      filter: true,
+    };
+    this.sideBar = 'columns';
+
+  }
+
+  ngOnInit() {
     this.columnData = this.DataService.getcolumnDefs();
     this.rowData = this.DataService.getrowData();
+
   }
-  
-close()
-{
-  this.router.navigate(['/dashboard']);
-}
-  
+
+
+
+
+  close() {
+    this.router.navigate(['/dashboard']);
+  }
+
 }

@@ -9,8 +9,8 @@ export class GridDataService {
 
  
   columnDefs = [
-    {headerName: 'Branch id', field: 'branchid', sortable: true, filter: true, checkboxSelection: true },
-    {headerName: 'Bankname', field: 'Bankname', sortable: true, filter: true },
+    {headerName: 'Branch id', field: 'branchid', sortable: true, filter: true, checkboxSelection: true,},
+    {headerName: 'Bankname', field: 'Bankname', sortable: true, filter: true, },
     {headerName: 'Utkarsh', field: 'utkarsh', sortable: true, filter: true},
     {headerName: 'Branch', field: 'branch', sortable: true, filter: true },
     {headerName: 'Mode', field: 'mode', sortable: true, filter: true},

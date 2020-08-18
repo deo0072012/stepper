@@ -21,6 +21,8 @@ import { GridDataService } from './homepage/grid-data.service';
 import { StepperComponent } from './homepage/stepper/stepper.component';
 import { MatFormFieldModule} from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
+import {MatMenuModule} from '@angular/material/menu'; 
+
 
 
 @NgModule({
@@ -48,7 +50,11 @@ import { MatInputModule } from '@angular/material/input';
     FormsModule,
     ReactiveFormsModule,
     MatFormFieldModule,
-    MatInputModule 
+    MatInputModule,
+    MatMenuModule,
+    
+    
+      
   ],
   providers: [GridDataService],
   bootstrap: [AppComponent]

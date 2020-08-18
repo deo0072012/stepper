@@ -29,11 +29,19 @@
         src="assets/algo-1bh.png" 
         alt="Powered by Algofusion">
       </span>
-      <button 
-      class="nav-icon"
-      mat-icon-button>
-        <mat-icon>account_circle</mat-icon>
+      
+      <button  class="nav-icon" mat-button [matMenuTriggerFor]="menu">
+        <i class="material-icons" id="icn">account_circle</i>
       </button>
+    
+      <mat-menu #menu="matMenu">
+        <button mat-menu-item>{{"email@gmail.com"}}</button>
+        <button mat-menu-item><i class="material-icons" >settings</i> Account settings</button>
+        <button mat-menu-item><i class="material-icons" >logout</i> Logout</button>
+      </mat-menu>
+        
+    
+    
     </mat-toolbar-row>
   </mat-toolbar>
   <mat-drawer-container>
@@ -115,13 +123,22 @@
             #agGrid
             style="width: 98%; height: 400px;"
             class="ag-theme-balham"
+            id="myGrid"
+            [modules]="modules"
             [rowData]="rowData"
             [columnDefs]="columnData"
-            rowSelection="multiple"
+            [rowSelection]="multiple"
             [animateRows]= "true"
-            [pagination]= "true"
-            [paginationPageSize]= "15">
-          </ag-grid-angular>
+              [autoGroupColumnDef]="autoGroupColumnDef"
+              [suppressDragLeaveHidesColumns]="true"
+              [rowGroupPanelShow]="rowGroupPanelShow"
+              [sideBar]="sideBar"
+              [defaultColDef]="defaultColDef"
+              [suppressMakeColumnVisibleAfterUnGroup]="true"
+              [pagination]= "true"
+                    
+            [paginationPageSize]= "10">
+              </ag-grid-angular>
         </div>
         
     </mat-drawer-content>
