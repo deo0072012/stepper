@@ -2,3 +2,84 @@
     margin-top: 8px;
   }
   
+.stepper-button {
+  background-color: #0867c0;
+  color: #f5f5f5;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+}
+.stepper-button1 {
+  background-color: cadetblue;
+  color: #f5f5f5;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+}
+.stepper-button2 {
+  background-color: rgb(112, 95, 160);
+  color: #f5f5f5;
+  border: none;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.normal-button {
+  background-color: #0867c0;
+  color: #f5f5f5;
+  border: none;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.text-field {
+  width: 300px;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.text-field-2 {
+  width: 300px;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.text-field-3 {
+  width: 200px;
+  background-color: lightsteelblue;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.below-line {
+  margin-top: 20px;
+}
+
+.ml-10 {
+  margin-left: 10px;
+}
+
+.f-right {
+  float: right;
+  margin-left: 10px;
+}
+
+.icon {
+  font-size: 16px;
+}
+.icon1 {
+  font-size: 16px;
+ }
+
+ span {
+  word-spacing: 100px;
+  font-size: small;
+  font-style: normal;
+   }
+
+.mat-toolbar {
+  border-collapse: collapse;
+  border-radius: 1rem;
+  background:lightblue;
+  color:blue;
+}

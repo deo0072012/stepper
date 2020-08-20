@@ -14,6 +14,7 @@ import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './app.component';
 import { DashboardComponent } from './homepage/dashboard/dashboard.component';
+import { SidebarComponent } from './homepage/sidebar/sidebar.component';
 import { ReconsComponent } from './homepage/recons/recons.component';
 import { SummaryComponent } from './homepage/summary/summary.component';
 import { ReportsComponent } from './homepage/reports/reports.component';
@@ -28,6 +29,7 @@ import {MatMenuModule} from '@angular/material/menu';
 @NgModule({
   declarations: [
     AppComponent,
+    SidebarComponent,
     DashboardComponent,
     ReconsComponent,
     SummaryComponent,

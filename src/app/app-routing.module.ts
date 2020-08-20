@@ -11,9 +11,9 @@ import { StepperComponent } from './homepage/stepper/stepper.component';
 const routes: Routes = [
   
   { path:'', redirectTo: 'DashboardComponent', pathMatch: 'full'},
-  { path:'recons', component: ReconsComponent},
+  { path:'dashboard', component: DashboardComponent},
   { path:'summary', component: SummaryComponent},
-  {path: 'stepper', component:StepperComponent},
+  {path: 'recons', component:StepperComponent},
   {path: 'dashboard', component:ReconsComponent}
 ];
 

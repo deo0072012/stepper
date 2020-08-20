@@ -1,43 +1,107 @@
 <!-- <mat-toolbar color="primary"  >
     <span  class="center">Angular Stepper</span>
   </mat-toolbar> -->
-  
-  <button mat-raised-button (click)="isLinear = !isLinear" id="toggle-linear">
-    {{!isLinear ? 'Enable ' : 'Disable '}}
-  </button>
   <mat-horizontal-stepper [linear]="isLinear" #stepper>
     <mat-step [stepControl]="firstFormGroup">
       <form [formGroup]="firstFormGroup">
-        <ng-template matStepLabel>Fill out your bank Name</ng-template>
-        <mat-form-field>
-          <mat-label>Bank Name</mat-label>
-          <input matInput placeholder="Bank Name" formControlName="firstCtrl" required>
-        </mat-form-field>
-        <div>
-          <button mat-button matStepperNext>Next</button>
+        <ng-template matStepLabel>
+          <div>Define Source</div>
+        </ng-template>
+        <div class="below-line">
+          Recon Process :     
+        <input type="text"
+          class="text-field">
+          Recon Name :     
+          <input type="text"
+            class="text-field">
+          <button class="normal-button f-right" mat-button matStepperNext>
+            <mat-icon class="icon">add</mat-icon>
+            New Source
+          </button>
+        </div>
+        <div class="below-line">
+        <input type="text"
+          class="text-field-2"
+          placeholder="Enter Recon Id">
+          <input type="text"
+          class="text-field-2 ml-10"
+            placeholder="Enter Business Context Id">
+        </div>
+        <div class="below-line f-right">
+          <button class="stepper-button1" mat-button matStepperPrevious >Previous</button>
+          <button class="stepper-button" mat-button matStepperNext>Next</button>
         </div>
       </form>
     </mat-step>
-    <mat-step [stepControl]="secondFormGroup" label="Fill out your Branch">
+    <mat-step [stepControl]="secondFormGroup" label="Select Match Columns">
+      <form [formGroup]="secondFormGroup">
+        <div class="below-line">
+          Manage Matching Rule
+          <button class="normal-button ml-10" mat-button>
+            <mat-icon class="icon">add</mat-icon>
+            Add Matching Rule
+          </button>
+          <button class="normal-button ml-10" mat-button>
+            <mat-icon class="icon">unfold_more</mat-icon>
+            Order Matching Rule
+          </button>
+          <button class="normal-button bg-black ml-10" style="background-color: rgb(80, 104, 45);">
+            <mat-icon class="icon">save</mat-icon>
+            Save
+          </button>
+        <div class="below-line f-right">
+          <button class="stepper-button1" mat-button matStepperPrevious>Previous</button>
+          <button class="stepper-button ml-10" mat-button matStepperNext>Next</button>
+        </div>
+        </div>
+      </form>
+    </mat-step>
+    <mat-step [stepControl]="secondFormGroup" label="Define Sum columns">
       <form [formGroup]="secondFormGroup">
         <mat-form-field>
-          <mat-label>Branch</mat-label>
-          <input matInput formControlName="secondCtrl" placeholder="Ex. c v raman, halasuru"
-                 required>
+          <mat-label>Define Sum Columns</mat-label>
+          <input matInput formControlName="secondCtrl" placeholder="Plx enter the sum" required>
         </mat-form-field>
-        <div>
-          <button mat-button matStepperPrevious>Back</button>
-          <button mat-button matStepperNext>Next</button>
+        <mat-toolbar >
+          <span >Rule</span>
+          <span>Source</span>
+          <span>GroupBy Functions</span>
+          <span>Sum Columns</span>
+          <span>Debit Credit Column</span>
+        </mat-toolbar>
+        <div class="below-line f-right">
+          
+          <button class="stepper-button1" mat-button matStepperPrevious>Previous</button>
+          <button class="stepper-button ml-10" mat-button matStepperNext>Next</button>
         </div>
       </form>
     </mat-step>
     <mat-step>
-      <ng-template matStepLabel>Done</ng-template>
-      <p>You are now done.</p>
-      <div>
-        <button mat-button matStepperPrevious>Back</button>
-        <button mat-button (click)="stepper.reset()">Reset</button>
-      </div>
+      <ng-template matStepLabel>Result Of Process</ng-template>
+        <div class="below-line">
+          <input type="text"
+            value="Source"
+            class="text-field-3"
+            disabled>
+            <input type="text"
+            value="Matched"
+            class="text-field-3"
+            disabled>
+            <input type="text"
+            class="text-field-3"
+            value="Unmatched"
+            disabled>
+            <input type="text"
+            class="text-field-3"
+            value="Reversal"
+            disabled>
+          </div>
+        <div class="below-line f-right">
+          <button class="stepper-button2" mat-button matStepperNext>Download</button><br><br>
+          <button class="stepper-button1" mat-button matStepperPrevious>Previous</button>
+          <button class="stepper-button ml-10" mat-button matStepperNext>Next</button>
+        </div>
+        <!-- <button mat-button (click)="stepper.reset()">Reset</button> -->
     </mat-step>
   </mat-horizontal-stepper>
   

@@ -23,23 +23,26 @@ export class DashboardComponent implements OnInit {
 
 
   constructor(private DataService: GridDataService, public router: Router) {
-    this.defaultColDef = {
-      flex: 1,
-      minWidth: 100,
-      enableValue: true,
-      enableRowGroup: true,
-      enablePivot: true,
-      sortable: true,
-      filter: true,
-    };
-    this.sideBar = 'columns';
+    
 
   }
 
   ngOnInit() {
     this.columnData = this.DataService.getcolumnDefs();
     this.rowData = this.DataService.getrowData();
-
+     this.autoGroupColumnDef={minwidth:200};
+     this.rowGroupPanelShow='always';
+     this.defaultColDef = {
+      flex: 1,
+      minWidth: 150,
+      enableValue: true,
+      enableRowGroup: true,
+      enablePivot: true,
+      sortable: true,
+      filter: true,
+      resizable:true
+    }
+    this.sideBar = 'columns'
   }
 
 
