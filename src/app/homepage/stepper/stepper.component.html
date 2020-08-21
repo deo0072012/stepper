@@ -1,11 +1,11 @@
 <!-- <mat-toolbar color="primary"  >
     <span  class="center">Angular Stepper</span>
   </mat-toolbar> -->
-  <mat-horizontal-stepper [linear]="isLinear" #stepper>
+  <mat-horizontal-stepper  labelPosition="bottom" [linear]="isLinear" #stepper>
     <mat-step [stepControl]="firstFormGroup">
       <form [formGroup]="firstFormGroup">
         <ng-template matStepLabel>
-          <div>Define Source</div>
+          <div >Define Source</div>
         </ng-template>
         <div class="below-line">
           Recon Process :     
@@ -28,7 +28,6 @@
             placeholder="Enter Business Context Id">
         </div>
         <div class="below-line f-right">
-          <button class="stepper-button1" mat-button matStepperPrevious >Previous</button>
           <button class="stepper-button" mat-button matStepperNext>Next</button>
         </div>
       </form>
@@ -63,7 +62,7 @@
           <input matInput formControlName="secondCtrl" placeholder="Plx enter the sum" required>
         </mat-form-field>
         <mat-toolbar >
-          <span >Rule</span>
+          <span>Rule</span>
           <span>Source</span>
           <span>GroupBy Functions</span>
           <span>Sum Columns</span>

@@ -22,7 +22,9 @@ import { GridDataService } from './homepage/grid-data.service';
 import { StepperComponent } from './homepage/stepper/stepper.component';
 import { MatFormFieldModule} from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
-import {MatMenuModule} from '@angular/material/menu'; 
+import { MatMenuModule} from '@angular/material/menu'; 
+import {MatTableModule} from '@angular/material/table';
+import { SourcesComponent } from './sources/sources.component'; 
 
 
 
@@ -35,6 +37,7 @@ import {MatMenuModule} from '@angular/material/menu';
     SummaryComponent,
     ReportsComponent,
     StepperComponent,
+    SourcesComponent,
 
   
   ],
@@ -54,6 +57,7 @@ import {MatMenuModule} from '@angular/material/menu';
     MatFormFieldModule,
     MatInputModule,
     MatMenuModule,
+    MatTableModule
     
     
       

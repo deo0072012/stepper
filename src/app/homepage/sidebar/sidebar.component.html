@@ -20,27 +20,35 @@
           <button mat-menu-item><i class="material-icons" >settings</i> Account settings</button>
           <button mat-menu-item><i class="material-icons" >logout</i> Logout</button>
         </mat-menu>
-      </mat-toolbar-row>
+      </mat-toolbar-row>  
     </mat-toolbar>
     <mat-drawer-container>
-      <mat-drawer #drawer class="leftpanel" mode="side">
+      <mat-drawer #drawer class="leftpanel" mode="side" opened="false">
           <mat-action-list class="nav-items">
             <h4 align ="center" class="header">Settings</h4>
               <mat-list-item class="sidebuttons" [routerLink]="['/dashboard']"> 
                 <mat-icon class="iconspace">dashboard</mat-icon> 
                 <span class="nav-title"> Manage Recons </span>
               </mat-list-item>
-              <mat-list-item class="sidebuttons" [routerLink]="['/recons']">
+              <mat-list-item class="sidebuttons" [routerLink]="['/configurations']">
                 <mat-icon class="iconspace">table_chart</mat-icon> 
-                <span class="nav-title"> Configure recons</span>
+                <span class="nav-title"> Configure Recons</span>
               </mat-list-item>
               <mat-list-item class="sidebuttons" [routerLink]="['/summary']">
-                <mat-icon class="iconspace">desktop_mac</mat-icon> 
+                <mat-icon class="iconspace">reports</mat-icon> 
                 <span class="nav-title"> Recon reports</span>
               </mat-list-item>
+              <mat-list-item class="sidebuttons" [routerLink]="['/sources']">
+                <mat-icon class="iconspace">sources</mat-icon> 
+                <span class="nav-title"> Sources</span>
+              </mat-list-item>
           </mat-action-list>
+          
       </mat-drawer>
       <mat-drawer-content class="content-wrapper">
+
+        
+       
           <router-outlet></router-outlet>
       </mat-drawer-content>
     </mat-drawer-container>

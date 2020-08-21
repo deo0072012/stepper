@@ -4,6 +4,7 @@ import {AllModules,Module} from '@ag-grid-enterprise/all-modules'
 
 
 
+
 @Component({
   selector: 'app-sidebar',
   templateUrl: './sidebar.component.html',
@@ -11,6 +12,9 @@ import {AllModules,Module} from '@ag-grid-enterprise/all-modules'
 })
 export class SidebarComponent implements OnInit {
   public modules: Module[] = AllModules;
+ 
+  /** Gets the total cost of all transactions. */
+ 
 
   constructor( public router: Router) {
 

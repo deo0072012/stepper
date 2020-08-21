@@ -28,8 +28,9 @@
   background-color: #0867c0;
   color: #f5f5f5;
   border: none;
-  padding: 5px;
   border-radius: 5px;
+  padding-top: 5px;
+  text-align: center;
 }
 
 .text-field {
@@ -61,12 +62,15 @@
 
 .f-right {
   float: right;
-  margin-left: 10px;
+  padding-top:5px;
+  /* margin-left: 5px;
+  text-align: center; */
 }
 
 .icon {
   font-size: 16px;
-}
+  padding-top: 5px;
+  }
 .icon1 {
   font-size: 16px;
  }
@@ -83,3 +87,4 @@
   background:lightblue;
   color:blue;
 }
+ 

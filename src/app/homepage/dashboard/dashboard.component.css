@@ -148,11 +148,15 @@ input[type="text"] {
     border-radius: 5px;  
     font-size: 12px; 
     background-color: #0867c0;
+    text-align: center;
     color: #fff;
     border: none;
-}
+    }
 .font {
     font-size: 16px; 
+    vertical-align: middle;
+    justify-content: center;
+    padding-top: 10px;
 }
 
 .close{
