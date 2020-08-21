@@ -87,4 +87,18 @@
   background:lightblue;
   color:blue;
 }
+
+.mat-horizontal-stepper-header .mat-stepper-horizontal-line {
+  border-top-color: green; 
+  border-top-width: 1px;
+  border-top-style: solid;
+}
+
+
+.mat-horizontal-stepper-header[aria-selected='true'] ~ .mat-stepper-horizontal-line{
+border-top-color: olivedrab;
+} 
+
+
+  
  
